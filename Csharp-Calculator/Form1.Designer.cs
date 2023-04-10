@@ -44,7 +44,8 @@
             Divide = new Button();
             Minus = new Button();
             ResultButton = new Button();
-            label1 = new Label();
+            Stat1 = new Label();
+            Stat2 = new Label();
             SuspendLayout();
             // 
             // Number1
@@ -55,13 +56,13 @@
             Number1.FlatStyle = FlatStyle.Flat;
             Number1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Number1.ForeColor = Color.White;
-            Number1.Location = new Point(36, 238);
-            Number1.Margin = new Padding(3, 2, 3, 2);
+            Number1.Location = new Point(34, 307);
             Number1.Name = "Number1";
-            Number1.Size = new Size(52, 45);
+            Number1.Size = new Size(59, 60);
             Number1.TabIndex = 0;
             Number1.Text = "1";
             Number1.UseVisualStyleBackColor = false;
+            Number1.Click += Number1_Click;
             // 
             // Number2
             // 
@@ -71,13 +72,13 @@
             Number2.FlatStyle = FlatStyle.Flat;
             Number2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Number2.ForeColor = Color.White;
-            Number2.Location = new Point(94, 238);
-            Number2.Margin = new Padding(3, 2, 3, 2);
+            Number2.Location = new Point(100, 307);
             Number2.Name = "Number2";
-            Number2.Size = new Size(52, 45);
+            Number2.Size = new Size(59, 60);
             Number2.TabIndex = 1;
             Number2.Text = "2";
             Number2.UseVisualStyleBackColor = false;
+            Number2.Click += Number2_Click;
             // 
             // Number3
             // 
@@ -87,13 +88,13 @@
             Number3.FlatStyle = FlatStyle.Flat;
             Number3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Number3.ForeColor = Color.White;
-            Number3.Location = new Point(152, 238);
-            Number3.Margin = new Padding(3, 2, 3, 2);
+            Number3.Location = new Point(167, 307);
             Number3.Name = "Number3";
-            Number3.Size = new Size(52, 45);
+            Number3.Size = new Size(59, 60);
             Number3.TabIndex = 2;
             Number3.Text = "3";
             Number3.UseVisualStyleBackColor = false;
+            Number3.Click += Number3_Click;
             // 
             // Number6
             // 
@@ -103,13 +104,13 @@
             Number6.FlatStyle = FlatStyle.Flat;
             Number6.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Number6.ForeColor = Color.White;
-            Number6.Location = new Point(153, 188);
-            Number6.Margin = new Padding(3, 2, 3, 2);
+            Number6.Location = new Point(168, 241);
             Number6.Name = "Number6";
-            Number6.Size = new Size(52, 45);
+            Number6.Size = new Size(59, 60);
             Number6.TabIndex = 5;
             Number6.Text = "6";
             Number6.UseVisualStyleBackColor = false;
+            Number6.Click += Number6_Click;
             // 
             // Number5
             // 
@@ -119,13 +120,13 @@
             Number5.FlatStyle = FlatStyle.Flat;
             Number5.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Number5.ForeColor = Color.White;
-            Number5.Location = new Point(94, 188);
-            Number5.Margin = new Padding(3, 2, 3, 2);
+            Number5.Location = new Point(100, 241);
             Number5.Name = "Number5";
-            Number5.Size = new Size(52, 45);
+            Number5.Size = new Size(59, 60);
             Number5.TabIndex = 4;
             Number5.Text = "5";
             Number5.UseVisualStyleBackColor = false;
+            Number5.Click += Number5_Click;
             // 
             // Number4
             // 
@@ -135,13 +136,13 @@
             Number4.FlatStyle = FlatStyle.Flat;
             Number4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Number4.ForeColor = Color.White;
-            Number4.Location = new Point(36, 188);
-            Number4.Margin = new Padding(3, 2, 3, 2);
+            Number4.Location = new Point(34, 241);
             Number4.Name = "Number4";
-            Number4.Size = new Size(52, 45);
+            Number4.Size = new Size(59, 60);
             Number4.TabIndex = 3;
             Number4.Text = "4";
             Number4.UseVisualStyleBackColor = false;
+            Number4.Click += Number4_Click;
             // 
             // Multipluy
             // 
@@ -149,15 +150,15 @@
             Multipluy.FlatAppearance.BorderColor = Color.White;
             Multipluy.FlatAppearance.BorderSize = 0;
             Multipluy.FlatStyle = FlatStyle.Flat;
-            Multipluy.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Multipluy.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
             Multipluy.ForeColor = Color.White;
-            Multipluy.Location = new Point(152, 90);
-            Multipluy.Margin = new Padding(3, 2, 3, 2);
+            Multipluy.Location = new Point(167, 110);
             Multipluy.Name = "Multipluy";
-            Multipluy.Size = new Size(52, 45);
+            Multipluy.Size = new Size(59, 60);
             Multipluy.TabIndex = 11;
-            Multipluy.Text = "*";
+            Multipluy.Text = "×";
             Multipluy.UseVisualStyleBackColor = false;
+            Multipluy.Click += Multipluy_Click;
             // 
             // Zero
             // 
@@ -167,13 +168,13 @@
             Zero.FlatStyle = FlatStyle.Flat;
             Zero.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Zero.ForeColor = Color.White;
-            Zero.Location = new Point(94, 90);
-            Zero.Margin = new Padding(3, 2, 3, 2);
+            Zero.Location = new Point(100, 110);
             Zero.Name = "Zero";
-            Zero.Size = new Size(52, 45);
+            Zero.Size = new Size(59, 60);
             Zero.TabIndex = 10;
             Zero.Text = "0";
             Zero.UseVisualStyleBackColor = false;
+            Zero.Click += Zero_Click;
             // 
             // Clear
             // 
@@ -182,13 +183,13 @@
             Clear.FlatStyle = FlatStyle.Flat;
             Clear.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             Clear.ForeColor = Color.White;
-            Clear.Location = new Point(36, 90);
-            Clear.Margin = new Padding(3, 2, 3, 2);
+            Clear.Location = new Point(34, 110);
             Clear.Name = "Clear";
-            Clear.Size = new Size(52, 45);
+            Clear.Size = new Size(59, 60);
             Clear.TabIndex = 9;
             Clear.Text = "Clear";
             Clear.UseVisualStyleBackColor = false;
+            Clear.Click += Clear_Click;
             // 
             // Number9
             // 
@@ -198,13 +199,13 @@
             Number9.FlatStyle = FlatStyle.Flat;
             Number9.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Number9.ForeColor = Color.White;
-            Number9.Location = new Point(152, 139);
-            Number9.Margin = new Padding(3, 2, 3, 2);
+            Number9.Location = new Point(167, 175);
             Number9.Name = "Number9";
-            Number9.Size = new Size(52, 45);
+            Number9.Size = new Size(59, 60);
             Number9.TabIndex = 8;
             Number9.Text = "9";
             Number9.UseVisualStyleBackColor = false;
+            Number9.Click += Number9_Click;
             // 
             // Number8
             // 
@@ -214,13 +215,13 @@
             Number8.FlatStyle = FlatStyle.Flat;
             Number8.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Number8.ForeColor = Color.White;
-            Number8.Location = new Point(94, 139);
-            Number8.Margin = new Padding(3, 2, 3, 2);
+            Number8.Location = new Point(100, 175);
             Number8.Name = "Number8";
-            Number8.Size = new Size(52, 45);
+            Number8.Size = new Size(59, 60);
             Number8.TabIndex = 7;
             Number8.Text = "8";
             Number8.UseVisualStyleBackColor = false;
+            Number8.Click += Number8_Click;
             // 
             // Number7
             // 
@@ -230,13 +231,13 @@
             Number7.FlatStyle = FlatStyle.Flat;
             Number7.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Number7.ForeColor = Color.White;
-            Number7.Location = new Point(36, 139);
-            Number7.Margin = new Padding(3, 2, 3, 2);
+            Number7.Location = new Point(34, 175);
             Number7.Name = "Number7";
-            Number7.Size = new Size(52, 45);
+            Number7.Size = new Size(59, 60);
             Number7.TabIndex = 6;
             Number7.Text = "7";
             Number7.UseVisualStyleBackColor = false;
+            Number7.Click += Number7_Click;
             // 
             // Plus
             // 
@@ -244,15 +245,15 @@
             Plus.FlatAppearance.BorderColor = Color.White;
             Plus.FlatAppearance.BorderSize = 0;
             Plus.FlatStyle = FlatStyle.Flat;
-            Plus.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Plus.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
             Plus.ForeColor = Color.White;
-            Plus.Location = new Point(209, 188);
-            Plus.Margin = new Padding(3, 2, 3, 2);
+            Plus.Location = new Point(232, 241);
             Plus.Name = "Plus";
-            Plus.Size = new Size(52, 94);
+            Plus.Size = new Size(59, 125);
             Plus.TabIndex = 12;
             Plus.Text = "+";
             Plus.UseVisualStyleBackColor = false;
+            Plus.Click += Plus_Click;
             // 
             // Divide
             // 
@@ -260,15 +261,15 @@
             Divide.FlatAppearance.BorderColor = Color.White;
             Divide.FlatAppearance.BorderSize = 0;
             Divide.FlatStyle = FlatStyle.Flat;
-            Divide.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Divide.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
             Divide.ForeColor = Color.White;
-            Divide.Location = new Point(209, 90);
-            Divide.Margin = new Padding(3, 2, 3, 2);
+            Divide.Location = new Point(232, 110);
             Divide.Name = "Divide";
-            Divide.Size = new Size(52, 45);
+            Divide.Size = new Size(59, 60);
             Divide.TabIndex = 13;
-            Divide.Text = "/";
+            Divide.Text = "÷";
             Divide.UseVisualStyleBackColor = false;
+            Divide.Click += Divide_Click;
             // 
             // Minus
             // 
@@ -276,15 +277,15 @@
             Minus.FlatAppearance.BorderColor = Color.White;
             Minus.FlatAppearance.BorderSize = 0;
             Minus.FlatStyle = FlatStyle.Flat;
-            Minus.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Minus.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
             Minus.ForeColor = Color.White;
-            Minus.Location = new Point(209, 139);
-            Minus.Margin = new Padding(3, 2, 3, 2);
+            Minus.Location = new Point(232, 175);
             Minus.Name = "Minus";
-            Minus.Size = new Size(52, 45);
+            Minus.Size = new Size(59, 60);
             Minus.TabIndex = 14;
             Minus.Text = "-";
             Minus.UseVisualStyleBackColor = false;
+            Minus.Click += Minus_Click;
             // 
             // ResultButton
             // 
@@ -292,34 +293,45 @@
             ResultButton.FlatAppearance.BorderColor = Color.White;
             ResultButton.FlatAppearance.BorderSize = 0;
             ResultButton.FlatStyle = FlatStyle.Flat;
-            ResultButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            ResultButton.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
             ResultButton.ForeColor = Color.White;
-            ResultButton.Location = new Point(209, 49);
-            ResultButton.Margin = new Padding(3, 2, 3, 2);
+            ResultButton.Location = new Point(232, 55);
             ResultButton.Name = "ResultButton";
-            ResultButton.Size = new Size(52, 39);
+            ResultButton.Size = new Size(59, 52);
             ResultButton.TabIndex = 15;
             ResultButton.Text = "=";
             ResultButton.UseVisualStyleBackColor = false;
+            ResultButton.Click += ResultButton_Click;
             // 
-            // label1
+            // Stat1
             // 
-            label1.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(36, 47);
-            label1.Name = "label1";
-            label1.Size = new Size(167, 39);
-            label1.TabIndex = 16;
-            label1.Text = "2353";
-            label1.TextAlign = ContentAlignment.MiddleLeft;
+            Stat1.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            Stat1.ForeColor = Color.White;
+            Stat1.Location = new Point(35, 53);
+            Stat1.Name = "Stat1";
+            Stat1.Size = new Size(191, 52);
+            Stat1.TabIndex = 16;
+            Stat1.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // Stat2
+            // 
+            Stat2.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
+            Stat2.ForeColor = Color.White;
+            Stat2.Location = new Point(34, 52);
+            Stat2.Name = "Stat2";
+            Stat2.Size = new Size(191, 52);
+            Stat2.TabIndex = 17;
+            Stat2.TextAlign = ContentAlignment.MiddleLeft;
+            Stat2.Visible = false;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(26, 27, 40);
-            ClientSize = new Size(281, 309);
-            Controls.Add(label1);
+            ClientSize = new Size(322, 399);
+            Controls.Add(Stat2);
+            Controls.Add(Stat1);
             Controls.Add(ResultButton);
             Controls.Add(Minus);
             Controls.Add(Divide);
@@ -336,7 +348,6 @@
             Controls.Add(Number3);
             Controls.Add(Number2);
             Controls.Add(Number1);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -360,6 +371,7 @@
         private Button Divide;
         private Button Minus;
         private Button ResultButton;
-        private Label label1;
+        private Label Stat1;
+        private Label Stat2;
     }
 }
