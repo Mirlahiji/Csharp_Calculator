@@ -9,6 +9,7 @@ namespace Csharp_Calculator
 
         char UserOp = '\0';
         bool IsSecend = false;
+        double x = 0, n = 0;
 
 
         string GetNumbers(int number)
@@ -47,6 +48,20 @@ namespace Csharp_Calculator
                 Stat1.Visible = true;
                 Stat2.Visible = false;
             }
+        }
+
+        static double power(double x, double n)
+        {
+            // Initialize result by 1
+            double pow = 1;
+
+            // Multiply x for n times
+            for (int i = 0; i < n; i++)
+            {
+                pow = pow * x;
+            }
+
+            return pow;
         }
 
 
@@ -124,6 +139,9 @@ namespace Csharp_Calculator
                 case '/':
                     Answer = S1 / S2;
                     break;
+                case 'p':
+                    Answer = power(S1, S2);
+                    break;
                 default:
                     Stat1.Text = "ERORR";
                     break;
@@ -159,6 +177,11 @@ namespace Csharp_Calculator
         private void Multipluy_Click(object sender, EventArgs e)
         {
             Oprators('*');
+        }
+
+        private void power_Click(object sender, EventArgs e)
+        {
+            Oprators('p');
         }
     }
 }

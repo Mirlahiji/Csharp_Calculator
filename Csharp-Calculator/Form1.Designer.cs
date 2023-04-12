@@ -46,6 +46,7 @@
             ResultButton = new Button();
             Stat1 = new Label();
             Stat2 = new Label();
+            Power = new Button();
             SuspendLayout();
             // 
             // Number1
@@ -168,7 +169,7 @@
             Zero.FlatStyle = FlatStyle.Flat;
             Zero.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Zero.ForeColor = Color.White;
-            Zero.Location = new Point(100, 110);
+            Zero.Location = new Point(100, 375);
             Zero.Name = "Zero";
             Zero.Size = new Size(59, 60);
             Zero.TabIndex = 10;
@@ -324,12 +325,29 @@
             Stat2.TextAlign = ContentAlignment.MiddleLeft;
             Stat2.Visible = false;
             // 
+            // Power
+            // 
+            Power.BackColor = Color.FromArgb(82, 201, 220);
+            Power.FlatAppearance.BorderColor = Color.White;
+            Power.FlatAppearance.BorderSize = 0;
+            Power.FlatStyle = FlatStyle.Flat;
+            Power.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            Power.ForeColor = Color.White;
+            Power.Location = new Point(99, 110);
+            Power.Name = "Power";
+            Power.Size = new Size(59, 60);
+            Power.TabIndex = 18;
+            Power.Text = "X^n";
+            Power.UseVisualStyleBackColor = false;
+            Power.Click += power_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(26, 27, 40);
-            ClientSize = new Size(322, 399);
+            ClientSize = new Size(320, 447);
+            Controls.Add(Power);
             Controls.Add(Stat2);
             Controls.Add(Stat1);
             Controls.Add(ResultButton);
@@ -373,5 +391,6 @@
         private Button ResultButton;
         private Label Stat1;
         private Label Stat2;
+        private Button Power;
     }
 }
