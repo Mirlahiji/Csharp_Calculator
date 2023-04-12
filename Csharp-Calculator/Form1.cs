@@ -50,21 +50,6 @@ namespace Csharp_Calculator
             }
         }
 
-        static double power(double x, double n)
-        {
-            // Initialize result by 1
-            double pow = 1;
-
-            // Multiply x for n times
-            for (int i = 0; i < n; i++)
-            {
-                pow = pow * x;
-            }
-
-            return pow;
-        }
-
-
         private void Number1_Click(object sender, EventArgs e)
         {
 
@@ -140,7 +125,10 @@ namespace Csharp_Calculator
                     Answer = S1 / S2;
                     break;
                 case 'p':
-                    Answer = power(S1, S2);
+                    Answer = Math.Pow(S1, S2);
+                    break;
+                case 's':
+                    Answer = Math.Sqrt(S1);
                     break;
                 default:
                     Stat1.Text = "ERORR";
@@ -182,6 +170,11 @@ namespace Csharp_Calculator
         private void power_Click(object sender, EventArgs e)
         {
             Oprators('p');
+        }
+
+        private void Square_Click(object sender, EventArgs e)
+        {
+            Oprators('s');
         }
     }
 }
