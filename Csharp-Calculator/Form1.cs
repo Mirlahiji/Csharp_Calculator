@@ -9,7 +9,6 @@ namespace Csharp_Calculator
 
         char UserOp = '\0';
         bool IsSecend = false;
-        double x = 0, n = 0;
 
 
         string GetNumbers(int number)
