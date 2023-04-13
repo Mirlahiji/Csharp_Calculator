@@ -1,10 +1,24 @@
+using System.Runtime.InteropServices;
+
 namespace Csharp_Calculator
 {
     public partial class Form1 : Form
     {
+        [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
+
+        private static extern IntPtr CreateRoundRctRgn(
+            int nLeftRect,
+            int nTopRect,
+            int nRightRect,
+            int nBottomRect,
+            int nWidthEllipse,
+            int nHeightEllipse
+            );
         public Form1()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.None;
+            Region = Region.FromHrgn(CreateRoundRctRgn(0, 0, Width, Height, 40, 40));
         }
 
         char UserOp = '\0';
