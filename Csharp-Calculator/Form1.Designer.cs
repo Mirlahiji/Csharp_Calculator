@@ -51,6 +51,7 @@
             label1 = new Label();
             label2 = new Label();
             closeButton = new Button();
+            srcCodeLabel = new LinkLabel();
             SuspendLayout();
             // 
             // Number1
@@ -419,12 +420,29 @@
             closeButton.UseVisualStyleBackColor = false;
             closeButton.Click += closeButton_Click;
             // 
+            // srcCodeLabel
+            // 
+            srcCodeLabel.ActiveLinkColor = Color.FromArgb(150, 150, 150);
+            srcCodeLabel.AutoSize = true;
+            srcCodeLabel.BackColor = Color.Transparent;
+            srcCodeLabel.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
+            srcCodeLabel.LinkColor = Color.White;
+            srcCodeLabel.Location = new Point(12, 319);
+            srcCodeLabel.Name = "srcCodeLabel";
+            srcCodeLabel.Size = new Size(72, 13);
+            srcCodeLabel.TabIndex = 24;
+            srcCodeLabel.TabStop = true;
+            srcCodeLabel.Text = "Source Code";
+            srcCodeLabel.VisitedLinkColor = Color.White;
+            srcCodeLabel.LinkClicked += srcCodeLabel_LinkClicked;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(26, 27, 40);
             ClientSize = new Size(308, 340);
+            Controls.Add(srcCodeLabel);
             Controls.Add(closeButton);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -484,5 +502,6 @@
         private Label label1;
         private Label label2;
         private Button closeButton;
+        private LinkLabel srcCodeLabel;
     }
 }
