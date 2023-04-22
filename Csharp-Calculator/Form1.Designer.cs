@@ -50,6 +50,7 @@
             Square = new Button();
             label1 = new Label();
             label2 = new Label();
+            closeButton = new Button();
             SuspendLayout();
             // 
             // Number1
@@ -401,6 +402,22 @@
             label2.TabIndex = 21;
             label2.Text = "Calculator";
             label2.TextAlign = ContentAlignment.MiddleCenter;
+            label2.MouseDown += onMouseDown;
+            // 
+            // closeButton
+            // 
+            closeButton.BackColor = Color.FromArgb(46, 47, 90);
+            closeButton.FlatAppearance.BorderColor = Color.FromArgb(46, 47, 90);
+            closeButton.FlatStyle = FlatStyle.Flat;
+            closeButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            closeButton.ForeColor = Color.White;
+            closeButton.Location = new Point(268, -1);
+            closeButton.Name = "closeButton";
+            closeButton.Size = new Size(39, 37);
+            closeButton.TabIndex = 22;
+            closeButton.Text = "X";
+            closeButton.UseVisualStyleBackColor = false;
+            closeButton.Click += closeButton_Click;
             // 
             // Form1
             // 
@@ -408,6 +425,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(26, 27, 40);
             ClientSize = new Size(308, 340);
+            Controls.Add(closeButton);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(Square);
@@ -465,5 +483,6 @@
         private Button Square;
         private Label label1;
         private Label label2;
+        private Button closeButton;
     }
 }

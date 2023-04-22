@@ -1,11 +1,15 @@
 using System.Runtime.InteropServices;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace Csharp_Calculator
 {
     public partial class Form1 : Form
     {
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HTCAPTION = 0x2;
+        [DllImport("User32.dll")] public static extern bool ReleaseCapture(); [DllImport("User32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
-
         private static extern IntPtr CreateRoundRctRgn(
             int nLeftRect,
             int nTopRect,
@@ -19,6 +23,15 @@ namespace Csharp_Calculator
             InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.None;
             Region = Region.FromHrgn(CreateRoundRctRgn(0, 0, Width, Height, 40, 40));
+        }
+
+        private void onMouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
+            }
         }
 
         char UserOp = '\0';
@@ -114,15 +127,22 @@ namespace Csharp_Calculator
             UserOpratorManager(0);
         }
 
+        public double S2;
+        public double S1;
         private void ResultButton_Click(object sender, EventArgs e)
         {
             IsSecend = false;
             VisibleManager();
 
-            double S1 = Double.Parse(Stat1.Text);
-            double S2 = Double.Parse(Stat2.Text);
+            if (Stat1.Text != string.Empty)
+            {
+                S1 = Double.Parse(Stat1.Text);
+            }
+            if (Stat2.Text != string.Empty)
+            {
+                S2 = Double.Parse(Stat2.Text);
+            }
             double Answer = 0;
-
             switch (UserOp)
             {
                 case '+':
@@ -144,7 +164,7 @@ namespace Csharp_Calculator
                     Answer = Math.Sqrt(S1);
                     break;
                 default:
-                    Stat1.Text = "ERORR";
+                    Stat1.Text = "ERROR";
                     break;
             }
             Stat1.Text = Answer.ToString();
@@ -188,6 +208,11 @@ namespace Csharp_Calculator
         private void Square_Click(object sender, EventArgs e)
         {
             Oprators('s');
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
