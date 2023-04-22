@@ -1,3 +1,13 @@
-# Csharp-Calculator
+## ABOUT windows form calculator: 
+This is a __Open source__ calculator build with visual sudio form for C# languge which is officially made for Windows and can do some basic calculation with numbers.
 
-![Screenshot (107)](https://user-images.githubusercontent.com/87209891/231876576-03a8ad40-9cf3-4b5e-b35d-da32e3b18632.png)
+### FEATURES :
+- **Addition**
+- **Subtraction**
+- **Division**
+- **Multiplication**
+- **Power**
+- **Square Root**
+
+## SCREEN SHOTS:
+<p align="center"> <img src="https://user-images.githubusercontent.com/87209891/233795732-979466b0-5896-4668-863b-d72b2aad868d.png" alt="csharpcalculator"> </p>
