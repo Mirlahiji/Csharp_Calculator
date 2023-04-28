@@ -1,5 +1,5 @@
 ## ABOUT windows form calculator: 
-This is an __Open-source__ calculator build with visual studio form for C# languge which is officially made for Windows and can do some basic calculation with numbers.
+This is an __Open-source__ calculator build with visual studio form for C# languge which is made for Windows and can do some basic calculation with numbers.
 
 ### FEATURES :
 - **Addition**
