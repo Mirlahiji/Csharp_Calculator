@@ -1,6 +1,7 @@
 using System.Runtime.InteropServices;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 using System.Diagnostics;
+using static System.Windows.Forms.AxHost;
 
 namespace Csharp_Calculator
 {
@@ -36,46 +37,34 @@ namespace Csharp_Calculator
         }
 
         char UserOp = '\0';
-        bool IsSecend = false;
+        public double S2;
+        public double S1;
+        public bool IsSecend = false;
 
-
-        string GetNumbers(int number)
+        string NumberToStr(int number)
         {
             string NumberStr = number.ToString();
             return NumberStr;
         }
+
+        //Just Show Number on Screen then if any operation happens statement will be change to next
         void UserOpratorManager(int NumberUp)
         {
-            if (IsSecend)
-            {
-                Stat2.Text += GetNumbers(NumberUp);
-            }
-            else
-            {
-                Stat1.Text += GetNumbers(NumberUp);
+            Stat1.Text += NumberToStr(NumberUp);
+            if (IsSecend) {
+                Stat1.Text = "";
+                Stat1.Text += NumberToStr(NumberUp);
             }
         }
 
-        void Oprators(char opr)
+        //Keep Operators and Save previse statement
+        void Operators(char opr)
         {
             IsSecend = true;
-            VisibleManager();
             UserOp = opr;
+            S1 = double.Parse(Stat1.Text);
         }
 
-        void VisibleManager()
-        {
-            if (IsSecend)
-            {
-                Stat1.Visible = false;
-                Stat2.Visible = true;
-            }
-            else
-            {
-                Stat1.Visible = true;
-                Stat2.Visible = false;
-            }
-        }
 
         private void Number1_Click(object sender, EventArgs e)
         {
@@ -128,22 +117,15 @@ namespace Csharp_Calculator
             UserOpratorManager(0);
         }
 
-        public double S2;
-        public double S1;
         private void ResultButton_Click(object sender, EventArgs e)
-        {
-            IsSecend = false;
-            VisibleManager();
+        { 
+            S2 = double.Parse(Stat1.Text);
 
-            if (Stat1.Text != string.Empty)
-            {
-                S1 = Double.Parse(Stat1.Text);
-            }
-            if (Stat2.Text != string.Empty)
-            {
-                S2 = Double.Parse(Stat2.Text);
-            }
+            //Clear for show answer
+            Stat1.Text = "";
             double Answer = 0;
+
+            //Do Operation
             switch (UserOp)
             {
                 case '+':
@@ -168,47 +150,47 @@ namespace Csharp_Calculator
                     Stat1.Text = "ERROR";
                     break;
             }
+
+
             Stat1.Text = Answer.ToString();
+            IsSecend = false;
+            S1 = 0; S2 = 0;
         }
 
         private void Plus_Click(object sender, EventArgs e)
         {
-            Oprators('+');
+            Operators('+');
         }
 
         private void Clear_Click(object sender, EventArgs e)
         {
             Stat1.Text = "";
-            Stat2.Text = "";
-
-            IsSecend = false;
-            VisibleManager();
 
         }
 
         private void Minus_Click(object sender, EventArgs e)
         {
-            Oprators('-');
+            Operators('-');
         }
 
         private void Divide_Click(object sender, EventArgs e)
         {
-            Oprators('/');
+            Operators('/');
         }
 
         private void Multipluy_Click(object sender, EventArgs e)
         {
-            Oprators('*');
+            Operators('*');
         }
 
         private void power_Click(object sender, EventArgs e)
         {
-            Oprators('p');
+            Operators('p');
         }
 
         private void Square_Click(object sender, EventArgs e)
         {
-            Oprators('s');
+            Operators('s');
         }
 
         private void closeButton_Click(object sender, EventArgs e)
