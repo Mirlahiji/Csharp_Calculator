@@ -313,9 +313,9 @@
             // 
             Stat1.Font = new Font("Segoe UI", 16F, FontStyle.Bold, GraphicsUnit.Point);
             Stat1.ForeColor = Color.White;
-            Stat1.Location = new Point(49, 33);
+            Stat1.Location = new Point(49, 48);
             Stat1.Name = "Stat1";
-            Stat1.Size = new Size(255, 61);
+            Stat1.Size = new Size(255, 46);
             Stat1.TabIndex = 16;
             Stat1.TextAlign = ContentAlignment.MiddleLeft;
             // 
