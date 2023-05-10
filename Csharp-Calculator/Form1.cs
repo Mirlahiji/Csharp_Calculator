@@ -51,7 +51,8 @@ namespace Csharp_Calculator
         void UserOpratorManager(int NumberUp)
         {
             Stat1.Text += NumberToStr(NumberUp);
-            if (IsSecend) {
+            if (IsSecend)
+            {
                 Stat1.Text = "";
                 Stat1.Text += NumberToStr(NumberUp);
             }
@@ -118,7 +119,7 @@ namespace Csharp_Calculator
         }
 
         private void ResultButton_Click(object sender, EventArgs e)
-        { 
+        {
             S2 = double.Parse(Stat1.Text);
 
             //Clear for show answer
@@ -200,7 +201,7 @@ namespace Csharp_Calculator
 
         private void srcCodeLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            var ps = new ProcessStartInfo("https://github.com/Mirlahiji/windows-form-calculator/")
+            var ps = new ProcessStartInfo("https://github.com/Mirlahiji/Csharp_Calculator")
             {
                 UseShellExecute = true,
                 Verb = "open"
