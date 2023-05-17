@@ -147,6 +147,12 @@ namespace Csharp_Calculator
                 case 's':
                     Answer = Math.Sqrt(S1);
                     break;
+                case 'l':
+                    Answer = Math.Log10(S1);
+                    break;
+                case 'n':
+                    Answer = Math.Log(S1);
+                    break;
                 default:
                     Stat1.Text = "ERROR";
                     break;
@@ -194,6 +200,16 @@ namespace Csharp_Calculator
             Operators('s');
         }
 
+
+        private void Nlog_Click(object sender, EventArgs e)
+        {
+            Operators('n');
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Operators('l');
+        }
+
         private void closeButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -208,5 +224,6 @@ namespace Csharp_Calculator
             };
             Process.Start(ps);
         }
+
     }
 }

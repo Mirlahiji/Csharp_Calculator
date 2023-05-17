@@ -51,6 +51,8 @@
             label2 = new Label();
             closeButton = new Button();
             srcCodeLabel = new LinkLabel();
+            Nlog = new Button();
+            button1 = new Button();
             SuspendLayout();
             // 
             // Number1
@@ -315,7 +317,7 @@
             Stat1.ForeColor = Color.White;
             Stat1.Location = new Point(49, 48);
             Stat1.Name = "Stat1";
-            Stat1.Size = new Size(255, 46);
+            Stat1.Size = new Size(323, 46);
             Stat1.TabIndex = 16;
             Stat1.TextAlign = ContentAlignment.MiddleLeft;
             // 
@@ -357,7 +359,7 @@
             label1.BackColor = Color.FromArgb(82, 201, 220);
             label1.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(262, 171);
+            label1.Location = new Point(261, 169);
             label1.Name = "label1";
             label1.Size = new Size(17, 19);
             label1.TabIndex = 20;
@@ -370,7 +372,7 @@
             label2.ForeColor = Color.FromArgb(224, 224, 224);
             label2.Location = new Point(-2, 1);
             label2.Name = "label2";
-            label2.Size = new Size(353, 47);
+            label2.Size = new Size(402, 47);
             label2.TabIndex = 21;
             label2.Text = "Calculator";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -383,7 +385,7 @@
             closeButton.FlatStyle = FlatStyle.Flat;
             closeButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             closeButton.ForeColor = Color.White;
-            closeButton.Location = new Point(306, -1);
+            closeButton.Location = new Point(355, 1);
             closeButton.Margin = new Padding(3, 4, 3, 4);
             closeButton.Name = "closeButton";
             closeButton.Size = new Size(45, 49);
@@ -408,12 +410,46 @@
             srcCodeLabel.VisitedLinkColor = Color.White;
             srcCodeLabel.LinkClicked += srcCodeLabel_LinkClicked;
             // 
+            // Nlog
+            // 
+            Nlog.BackColor = Color.FromArgb(82, 201, 220);
+            Nlog.FlatAppearance.BorderColor = Color.White;
+            Nlog.FlatAppearance.BorderSize = 0;
+            Nlog.FlatStyle = FlatStyle.Flat;
+            Nlog.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            Nlog.ForeColor = Color.White;
+            Nlog.Location = new Point(313, 97);
+            Nlog.Name = "Nlog";
+            Nlog.Size = new Size(59, 60);
+            Nlog.TabIndex = 25;
+            Nlog.Text = "nl";
+            Nlog.UseVisualStyleBackColor = false;
+            Nlog.Click += Nlog_Click;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(82, 201, 220);
+            button1.FlatAppearance.BorderColor = Color.White;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(313, 162);
+            button1.Name = "button1";
+            button1.Size = new Size(59, 60);
+            button1.TabIndex = 26;
+            button1.Text = "log";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(26, 27, 40);
-            ClientSize = new Size(352, 453);
+            ClientSize = new Size(400, 453);
+            Controls.Add(button1);
+            Controls.Add(Nlog);
             Controls.Add(srcCodeLabel);
             Controls.Add(closeButton);
             Controls.Add(label2);
@@ -472,5 +508,7 @@
         private Label label2;
         private Button closeButton;
         private LinkLabel srcCodeLabel;
+        private Button Nlog;
+        private Button button1;
     }
 }
