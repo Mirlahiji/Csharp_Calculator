@@ -12,4 +12,4 @@ This is an __Open-source__ calculator build with visual studio form for C# langu
 - **10 Base Logarithm**
 
 ## SCREEN SHOTS:
-<p align="center"> <img src="https://user-images.githubusercontent.com/87209891/233795732-979466b0-5896-4668-863b-d72b2aad868d.png" alt="csharpcalculator"> </p>
+<p align="center"> <img src="https://github.com/Mirlahiji/Csharp_Calculator/assets/87209891/57b9f007-55d8-4023-af88-df7a856b5883" alt="csharpcalculator"></p>
