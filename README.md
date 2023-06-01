@@ -6,7 +6,7 @@ This is an __Open-source__ calculator build with visual studio form for C# langu
 - **Subtraction**
 - **Division**
 - **Multiplication**
-- **Power**
+- **Exponentation**
 - **Square Root**
 - **Natural Logarithm**
 - **10 Base Logarithm**
